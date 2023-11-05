@@ -15,7 +15,7 @@
   "author": "Jean-Luc LOGAN <lognjean17@gmail.com>",
   "license": "ISC",
   "dependencies": {
-    "@eka-digital/rest-client": "file:../rest-client",
+    "@mljsdev/rest-client": "^1.0.3",
     "axios": "^1.6.0"
   },
   "devDependencies": {
