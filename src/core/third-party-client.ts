@@ -11,7 +11,7 @@ import {
   AxiosError,
   AxiosRequestConfig,
   RestClient,
-} from "@eka-digital/rest-client/src";
+} from "@mljsdev/rest-client";
 
 export class ThirdPartyClient {
   private set config(value: ThirdPartyClientConfig) {}
