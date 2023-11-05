@@ -10,6 +10,7 @@ import {
 import {
   AxiosError,
   AxiosRequestConfig,
+  AxiosResponse,
   RestClient,
 } from "@mljsdev/rest-client";
 
@@ -35,7 +36,7 @@ export class ThirdPartyClient {
   async connect(config?: AxiosRequestConfig): Promise<ThirdParty | AxiosError> {
     return await this.resClient
       .get(endpoints.third_parties, config)
-      .then((res) => res?.data)
+      .then((res: AxiosResponse) => res?.data)
       .catch((err: AxiosError) => err);
   }
 
@@ -50,7 +51,7 @@ export class ThirdPartyClient {
   ): Promise<ReqLog | AxiosError> {
     return await this.resClient
       .get(endpoints.third_parties + endpoints.req_logs + id, config)
-      .then((res) => res?.data)
+      .then((res: AxiosResponse) => res?.data)
       .catch((err: AxiosError) => err);
   }
 
@@ -62,7 +63,7 @@ export class ThirdPartyClient {
   async reqLogs(config?: AxiosRequestConfig): Promise<ReqLog[] | AxiosError> {
     return await this.resClient
       .get(endpoints.third_parties + endpoints.req_logs, config)
-      .then((res) => res?.data)
+      .then((res: AxiosResponse) => res?.data)
       .catch((err: AxiosError) => err);
   }
 
@@ -77,7 +78,7 @@ export class ThirdPartyClient {
   ): Promise<ErrorLog | AxiosError> {
     return await this.resClient
       .get(endpoints.third_parties + endpoints.error_logs + id, config)
-      .then((res) => res?.data)
+      .then((res: AxiosResponse) => res?.data)
       .catch((err: AxiosError) => err);
   }
 
@@ -91,7 +92,7 @@ export class ThirdPartyClient {
   ): Promise<ErrorLog[] | AxiosError> {
     return await this.resClient
       .get(endpoints.third_parties + endpoints.error_logs, config)
-      .then((res) => res?.data)
+      .then((res: AxiosResponse) => res?.data)
       .catch((err: AxiosError) => err);
   }
 
@@ -109,7 +110,7 @@ export class ThirdPartyClient {
         endpoints.third_parties + endpoints.authorized_clients + clientId,
         config
       )
-      .then((res) => res?.data)
+      .then((res: AxiosResponse) => res?.data)
       .catch((err: AxiosError) => err);
   }
 
@@ -123,7 +124,7 @@ export class ThirdPartyClient {
   ): Promise<AuthorizedClient[] | AxiosError> {
     return await this.resClient
       .get(endpoints.third_parties + endpoints.authorized_clients, config)
-      .then((res) => res?.data)
+      .then((res: AxiosResponse) => res?.data)
       .catch((err: AxiosError) => err);
   }
 
@@ -143,7 +144,7 @@ export class ThirdPartyClient {
         data,
         config
       )
-      .then((res) => res?.data)
+      .then((res: AxiosResponse) => res?.data)
       .catch((err: AxiosError) => err);
   }
 
@@ -165,7 +166,7 @@ export class ThirdPartyClient {
         data,
         config
       )
-      .then((res) => res?.data)
+      .then((res: AxiosResponse) => res?.data)
       .catch((err: AxiosError) => err);
   }
 
@@ -184,7 +185,7 @@ export class ThirdPartyClient {
         endpoints.third_parties + endpoints.authorized_clients + clientId,
         config
       )
-      .then((res) => res?.data)
+      .then((res: AxiosResponse) => res?.data)
       .catch((err: AxiosError) => err);
   }
 
@@ -206,7 +207,7 @@ export class ThirdPartyClient {
           endpoints.authorized_clients_revoke,
         config
       )
-      .then((res) => res?.data)
+      .then((res: AxiosResponse) => res?.data)
       .catch((err: AxiosError) => err);
   }
 
@@ -220,7 +221,7 @@ export class ThirdPartyClient {
   ): Promise<ReqErrorCount | AxiosError> {
     return await this.resClient
       .get(endpoints.third_parties + endpoints.request_count, config)
-      .then((res) => res?.data)
+      .then((res: AxiosResponse) => res?.data)
       .catch((err: AxiosError) => err);
   }
 
@@ -234,7 +235,7 @@ export class ThirdPartyClient {
   ): Promise<ReqErrorCount | AxiosError> {
     return await this.resClient
       .get(endpoints.third_parties + endpoints.error_count, config)
-      .then((res) => res?.data)
+      .then((res: AxiosResponse) => res?.data)
       .catch((err: AxiosError) => err);
   }
 }
