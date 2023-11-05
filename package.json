@@ -15,7 +15,7 @@
   "author": "Jean-Luc LOGAN <lognjean17@gmail.com>",
   "license": "ISC",
   "dependencies": {
-    "@mljsdev/rest-client": "^1.0.3",
+    "@mljsdev/rest-client": "^1.0.4",
     "axios": "^1.6.0"
   },
   "devDependencies": {
