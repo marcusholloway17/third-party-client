@@ -13,16 +13,14 @@ exports.ThirdPartyClient = void 0;
 const endpoint_1 = require("../constants/endpoint");
 const rest_client_1 = require("@mljsdev/rest-client");
 class ThirdPartyClient {
-    set config(value) { }
     constructor(config) {
         this.resClient = new rest_client_1.RestClient({
-            baseURL: this.config.clientHost,
+            baseURL: config === null || config === void 0 ? void 0 : config.clientHost,
             headers: {
-                "x-client-id": this.config.clientId,
-                "x-client-secret": this.config.clientSecret,
+                "x-client-id": config === null || config === void 0 ? void 0 : config.clientId,
+                "x-client-secret": config === null || config === void 0 ? void 0 : config.clientSecret,
             },
         });
-        this.config = config;
     }
     /**
      * Connect to the server and get third party details
@@ -33,7 +31,10 @@ class ThirdPartyClient {
         return __awaiter(this, void 0, void 0, function* () {
             return yield this.resClient
                 .get(endpoint_1.endpoints.third_parties, config)
-                .then((res) => res === null || res === void 0 ? void 0 : res.data)
+                .then((res) => {
+                console.log("connected successfully");
+                return res === null || res === void 0 ? void 0 : res.data;
+            })
                 .catch((err) => err);
         });
     }
