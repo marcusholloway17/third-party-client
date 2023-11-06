@@ -15,17 +15,16 @@ import {
 } from "@mljsdev/rest-client";
 
 export class ThirdPartyClient {
-  private set config(value: ThirdPartyClientConfig) {}
-  private resClient: RestClient = new RestClient({
-    baseURL: this.config.clientHost,
-    headers: {
-      "x-client-id": this.config.clientId,
-      "x-client-secret": this.config.clientSecret,
-    },
-  });
+  private resClient: RestClient;
 
   constructor(config: ThirdPartyClientConfig) {
-    this.config = config;
+    this.resClient = new RestClient({
+      baseURL: config?.clientHost,
+      headers: {
+        "x-client-id": config?.clientId,
+        "x-client-secret": config?.clientSecret,
+      },
+    });
   }
 
   /**
