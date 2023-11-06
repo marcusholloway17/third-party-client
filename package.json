@@ -16,7 +16,7 @@
   "author": "Jean-Luc LOGAN <lognjean17@gmail.com>",
   "license": "ISC",
   "dependencies": {
-    "@mljsdev/rest-client": "^1.0.5"
+    "@mljsdev/rest-client": "^1.0.8"
   },
   "devDependencies": {
     "@types/jest": "^29.5.7",
@@ -26,10 +26,6 @@
     "ts-node-dev": "^2.0.0",
     "typescript": "^5.2.2"
   },
-  "files": [
-    "src/dist/index.js",
-    "src/dist/index.d.ts"
-  ],
   "repository": {
     "url": "git+https://github.com/marcusholloway17/third-party-client.git"
   },
