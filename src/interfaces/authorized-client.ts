@@ -1,4 +1,4 @@
-import { AxiosError, AxiosRequestConfig } from "@eka-digital/rest-client/src";
+import { AxiosRequestConfig, AxiosError } from "@mljsdev/rest-client";
 import { ThirdParty } from ".";
 
 export interface AuthorizedClient {
