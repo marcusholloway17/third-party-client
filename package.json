@@ -4,7 +4,8 @@
   "description": "Client sdk for Third Party api",
   "main": "src/dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "buid": "tsc"
   },
   "keywords": [
     "test party",
@@ -15,13 +16,22 @@
   "author": "Jean-Luc LOGAN <lognjean17@gmail.com>",
   "license": "ISC",
   "dependencies": {
-    "@mljsdev/rest-client": "^1.0.4",
+    "@mljsdev/rest-client": "^1.0.5",
     "axios": "^1.6.0"
   },
   "devDependencies": {
+    "@types/axios": "^0.14.0",
+    "@types/jest": "^29.5.7",
+    "dotenv": "^16.3.1",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.1",
     "ts-node-dev": "^2.0.0",
     "typescript": "^5.2.2"
   },
+  "files": [
+    "src/dist/index.js",
+    "src/dist/index.d.ts"
+  ],
   "repository": {
     "url": "git+https://github.com/marcusholloway17/third-party-client.git"
   },
